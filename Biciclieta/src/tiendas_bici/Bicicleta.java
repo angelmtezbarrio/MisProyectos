@@ -1,13 +1,6 @@
 package tiendas_bici;
 
 public class Bicicleta {
-	
-	
-	public static void cambiarMarca(Bicicleta bicicleta, String marca) {
-		if (marca.equals("Orbea")){
-			bicicleta.cambiarMarca(marca);
-		}
-	}
 
 	//atributos
 	private int medRueda;
@@ -15,7 +8,6 @@ public class Bicicleta {
 	private int numeroCambios;	
 	private String marca;
 	private Rueda r=new Rueda();
-	
 	
 	//comportamiento
 	public int getMedRueda() {
@@ -36,21 +28,22 @@ public class Bicicleta {
 
 	private SuspensionBicicleta suspension;
 	
-	
-	
+	public static void cambiarMarca(Bicicleta bicicleta, String marca) {
+		if (marca.equals("Orbea")){
+			
+			bicicleta.cambiarMarca(marca);
+		
+		}
+	}
 	
 	int medRueda (){
-		
 		medRueda = 26;
 		return medRueda;
 	}
 	
 	void aviso_Bici(){
-		
 		System.out.println(medRueda +
 		mediaBici +numeroCambios	);
-		
-		
 	}
 	
 	void cambiarMarca (String marca){
